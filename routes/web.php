@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect('/', "/list");
+
+Route::get('/list', 'BookController@getList');
+Route::get('/detail/{id}', 'BookController@getDetail');

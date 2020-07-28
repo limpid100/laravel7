@@ -24,21 +24,14 @@
 		</style>
 		<div class="col-sm-12">
 			<div class="list-group">
-				<a href="detail.html" class="list-group-item">挪威的森林<span class="digest_count">笔记：300</span></a>
-				<a href="detail.html" class="list-group-item">三生三世十里桃花<span class="digest_count">笔记：40</span></a>
-				<a href="detail.html" class="list-group-item">从你的全世界路过<span class="digest_count">笔记：68</span></a>
-				<a href="detail.html" class="list-group-item">解忧杂货铺<span class="digest_count">笔记：760</span></a>
-				<a href="detail.html" class="list-group-item">乖，摸摸头<span class="digest_count">笔记：500</span></a>
-				<a href="detail.html" class="list-group-item">小王子<span class="digest_count">笔记：900</span></a>
-				<a href="detail.html" class="list-group-item">古文观止<span class="digest_count">笔记：40</span></a>
-				<a href="detail.html" class="list-group-item">朦胧诗<span class="digest_count">笔记：21</span></a>
-				<a href="detail.html" class="list-group-item">把时间当做朋友<span class="digest_count">笔记：10</span></a>
-				<a href="detail.html" class="list-group-item">白夜行<span class="digest_count">笔记：7</span></a>
+                @foreach($books as $book)
+				<a href="detail/{{$book->id}}" class="list-group-item">{{$book->name}}<span class="digest_count">笔记：300</span></a>
+                @endforeach
 			</div>
 		</div>
 		<div class="col-sm-12 text-right">
 			<a href="book_add.html" class="btn btn-success">添加</a>
-		</div> 
+		</div>
 	</div>
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
