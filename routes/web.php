@@ -16,4 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::redirect('/', "/list");
 
 Route::get('/list', 'BookController@getList');
-Route::get('/detail/{id}', 'BookController@getDetail');
+Route::get('/detail/{book}', 'BookController@getDetail');
+Route::get("/book_add", function (){
+    return view('book_add');
+});
+Route::post('book_add', 'BookController@addBook');
+Route::get('/detail/{digest}/digest_edit', 'BookController@digestEdit');
+Route::post('/detail/{digest}/digest_edit', 'BookController@digestEditSubmit');

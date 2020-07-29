@@ -35,7 +35,7 @@
     @foreach($digests as $digest)
     <div class="well">
         <p>{{$digest->content}}</p>
-        <p style="text-align: right">{{$digest->created_at}} &nbsp;&nbsp;&nbsp;&nbsp;<a href="digest_edit.html"><span class="glyphicon glyphicon-pencil"></span></a>&nbsp;&nbsp;<a href=""><span class="glyphicon glyphicon-trash"></span></a></p>
+        <p style="text-align: right">{{$digest->created_at}} &nbsp;&nbsp;&nbsp;&nbsp;<a href="/detail/{{$digest->id}}/digest_edit"><span class="glyphicon glyphicon-pencil"></span></a>&nbsp;&nbsp;<a href=""><span class="glyphicon glyphicon-trash"></span></a></p>
     </div>
     @endforeach
 	<div class="col-sm-12 text-right">

@@ -25,12 +25,12 @@
 		<div class="col-sm-12">
 			<div class="list-group">
                 @foreach($books as $book)
-				<a href="detail/{{$book->id}}" class="list-group-item">{{$book->name}}<span class="digest_count">笔记：300</span></a>
+				<a href="/detail/{{$book->id}}" class="list-group-item">{{$book->name}}<span class="digest_count">笔记：{{$book->count}}</span></a>
                 @endforeach
 			</div>
 		</div>
 		<div class="col-sm-12 text-right">
-			<a href="book_add.html" class="btn btn-success">添加</a>
+			<a href="book_add" class="btn btn-success">添加</a>
 		</div>
 	</div>
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
